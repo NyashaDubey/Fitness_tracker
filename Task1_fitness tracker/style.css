@@ -1,0 +1,337 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #222;
+  color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #FF6F61;
+}
+
+.main-content {
+  padding-top: 5rem;
+}
+
+.hero {
+  background-image: url('https://media.istockphoto.com/id/1320143958/photo/shot-of-a-young-man-working-out-with-battle-ropes-at-the-gym.webp?b=1&s=170667a&w=0&k=20&c=mSt-FxA6664D-oI_Pqsto3ONJYEvbpzRm29UUY0CDIA=');
+  background-size: contain;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 20rem 0;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #FF6F61;
+  color: white;
+  padding: 0.7rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #FF4C3B;
+}
+
+/* Style the profile and workout sections */
+
+
+.profile-section {
+  background-image: url('https://t3.ftcdn.net/jpg/01/19/59/74/360_F_119597487_SnvLBdheEGOxu05rMQ5tCzo250cRrTz9.jpg');
+  background-size: 100% 100%;
+  background-position: center;
+  padding: 20rem 0;
+  color: #fff;
+  text-align: center;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 500px;
+  margin: 20px;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.profile-card h3 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.profile-card p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.profile-card p:last-child {
+  margin-bottom: 0;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Add animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-card,
+.workout-card {
+  animation: fadeIn 0.8s ease-out both;
+  cursor: pointer;
+}
+
+.profile-card:hover,
+.workout-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+.workout-routine-section {
+  background-image: url('https://t3.ftcdn.net/jpg/04/29/35/62/360_F_429356296_CVQ5LkC6Pl55kUNLqLisVKgTw9vjyif1.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  background-color: #f9f9f9;
+  padding: 10rem 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.workout-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.workout-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px 0;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.workout-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.workout-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.workout-description {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+
+.workout-item:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.calorie-intake-section {
+  background-image: url('https://media.istockphoto.com/id/1343403562/photo/weight-loss-fitness-and-counting-calories-concept.jpg?s=612x612&w=0&k=20&c=o3WGfKPJ7HVkMPGQWm_ioxS40g0xs7ygqK4KgSou6AY=');
+  background-size: 100% 100%;
+
+  background-color: #fff;
+  padding: 20rem 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.calorie-form {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.calorie-form label {
+  font-size: 1.2rem;
+}
+
+.calorie-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.calorie-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #f39c12;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+
+.calorie-form button:hover {
+  background-color: #e67e22;
+}
+
+
+
+.contact-section {
+  background-image: url('https://img.freepik.com/premium-photo/customer-support-hotline-contact-us-people-connection-cube-wood-with-email-call-phone-address-chat-message-icons-wooden-block-cube-symbol-telephone-email-address-chat-message_256259-2443.jpg');
+  background-size: 100% 100%;
+  background-color: #f9f9f9;
+  padding: 80px 0;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.form-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.form-control {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.invalid-feedback {
+  color: #dc3545;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
